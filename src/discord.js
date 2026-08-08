@@ -17,8 +17,9 @@ import { DiscordSDK } from "./vendor/discord-sdk.mjs";
 
 // Discord Application Client ID — Discord injects ?client_id= into the
 // Activity iframe URL, so the URL param wins. This constant is the
-// fallback for direct links.
-const CLIENT_ID = "REPLACE_WITH_ENGLISH_TRIVIA_CLIENT_ID";
+// fallback for direct links (REAL app ID — placeholder broke the authorize
+// prompt; bible-trivia pattern, fixed 2026-08-08).
+const CLIENT_ID = "1535697137533194271";
 
 export let discordSdk = null;
 export let isDiscord = false;

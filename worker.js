@@ -49,6 +49,33 @@ function html(body, status = 200) {
   });
 }
 
+// ── Support page (proxied so it opens INSIDE the Discord activity) ─────────
+// Discord's Activity sandbox blocks external windows/navigation, so a plain
+// target="_blank" link does nothing inside the game. Serving the support
+// page same-origin (like /privacy + /terms) makes it open in-window. The
+// voice-support page is self-contained (inline CSS, Paystack inline.js only),
+// so proxying just the HTML is enough; we inject a back-to-game bar on top.
+const SUPPORT_URL = "https://walusimbi-leon1.github.io/voice-support/";
+async function handleSupport() {
+  try {
+    const upstream = await fetch(SUPPORT_URL, {
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; EnglishTrivia/1.0)" },
+    });
+    if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
+    let page = await upstream.text();
+    const bar =
+      '<div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:#0a1428;color:#fff;padding:12px 16px;font-size:14px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12)">' +
+      '<a href="/" style="color:#ffd76a;text-decoration:none;font-weight:600">← Back to English Trivia</a>' +
+      '</div>';
+    page = page.replace(/<body[^>]*>/i, (m) => m + bar);
+    return new Response(page, {
+      headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache" },
+    });
+  } catch (err) {
+    return json({ error: "Support page temporarily unavailable" }, 502);
+  }
+}
+
 function notFound() {
   return new Response("Not found", { status: 404 });
 }
@@ -551,6 +578,7 @@ export default {
       if (path === "/api/time") return await handleTime(request, env);
       if (path === "/privacy") return html(STATIC["privacy.html"]);
       if (path === "/terms") return html(STATIC["terms.html"]);
+      if (path === "/support") return await handleSupport(request);
       if (path === "/" || path === "") {
         return html(STATIC["index.html"]);
       }
