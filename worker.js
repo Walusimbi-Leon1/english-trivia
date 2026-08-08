@@ -56,30 +56,11 @@ function html(body, status = 200) {
 // voice-support page is self-contained (inline CSS, Paystack inline.js only),
 // so proxying just the HTML is enough; we inject a back-to-game bar on top.
 const SUPPORT_URL = "https://walusimbi-leon1.github.io/voice-support/";
-const THANK_YOU_PAGE = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Thank You 💜</title></head><body style="margin:0;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center">\n<div style="text-align:center;padding:24px;max-width:420px">\n<div style="font-size:64px">🎉</div>\n<h1 style="font-size:26px;margin:16px 0 10px">Thank You!</h1>\n<p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.6;margin:0 0 24px">Your support means the world.<br>It helps keep this project alive and growing.</p>\n<a href="/" style="display:inline-block;padding:13px 28px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;text-decoration:none;border-radius:12px;font-weight:600">← Back to the game</a>\n</div></body></html>';
-async function handleSupport(request) {
-  try {
-    // After a successful Paystack checkout, the browser returns here via
-    // callback_url=?paid=1 — show a thank-you instead of the donate page.
-    if (request && new URL(request.url).searchParams.get("paid") === "1") {
-      return html(THANK_YOU_PAGE);
-    }
-    const upstream = await fetch(SUPPORT_URL, {
-      headers: { "User-Agent": "Mozilla/5.0 (compatible; GameSupport/1.0)" },
-    });
-    if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
-    let page = await upstream.text();
-    const bar =
-      '<div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:#0a1428;color:#fff;padding:12px 16px;font-size:14px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.12)">' +
-      '<a href="/" style="color:#ffd76a;text-decoration:none;font-weight:600">← Back to the game</a>' +
-      '</div>';
-    page = page.replace(/<body[^>]*>/i, (m) => m + bar);
-    return new Response(page, {
-      headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache" },
-    });
-  } catch (err) {
-    return json({ error: "Support page temporarily unavailable" }, 502);
-  }
+async function handleSupport() {
+  // Keep /support working for any cached links: bounce to the real
+  // donate page. In Discord the game JS intercepts and uses
+  // openExternalLink instead; in a browser this redirect is fine.
+  return Response.redirect(SUPPORT_URL, 302);
 }
 
 function notFound() {
@@ -585,7 +566,7 @@ export default {
       if (path === "/api/time") return await handleTime(request, env);
       if (path === "/privacy") return html(STATIC["privacy.html"]);
       if (path === "/terms") return html(STATIC["terms.html"]);
-      if (path === "/support") return await handleSupport(request);
+      if (path === "/support") return await handleSupport();
       if (path === "/" || path === "") {
         return html(STATIC["index.html"]);
       }
