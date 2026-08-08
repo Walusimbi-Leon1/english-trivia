@@ -22,6 +22,7 @@ const FILES = {
   "discord.js": "discord.js",
   "firebase.js": "firebase.js",
   "app.js": "app.js",
+  "support.js": "support.js",
   "vendor/discord-sdk.mjs": "vendor/discord-sdk.mjs",
   "privacy.html": "privacy.html",
   "terms.html": "terms.html",
