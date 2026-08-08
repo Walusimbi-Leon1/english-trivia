@@ -48,7 +48,9 @@ jobs:
       - name: Commit generated data (via PR — main is protected)
         run: |
           set -euo pipefail
-          if git diff --quiet -- data/; then
+          # NOTE: use porcelain status, not `git diff` — the generator creates
+          # NEW files (untracked), which `git diff --quiet` never sees.
+          if [ -z "$(git status --porcelain -- data/)" ]; then
             echo "No changes to commit."
             exit 0
           fi
