@@ -179,11 +179,11 @@ Rules:
 - Every question must be answerable from standard English usage — no made-up phrases, no trick meanings
 - The source list gives the correct meaning for each phrase — trust it
 - Vary difficulty from easy to hard
-- For every question include a "ref" — the source phrase it came from, like "idiom: bite the bullet" or "proverb: all that glitters is not gold"
+- For every question include a "ref" — the CATEGORY ONLY (e.g. "idiom", "proverb", "colloquialism", "jargon", "euphemism", "maxims-aphorisms", "cliches"). Never include the phrase in ref — it would leak the answer.
 - Prefer well-known phrases; use the category label in ref
 ${avoid}
 Return ONLY a JSON array (no markdown, no reasoning text) with exactly this structure:
-[{"question":"Question text?","options":["A","B","C","D"],"correctAnswer":0,"ref":"idiom: bite the bullet"}]
+[{"question":"Question text?","options":["A","B","C","D"],"correctAnswer":0,"ref":"idiom"}]
 "correctAnswer" must be the index (0-3) of the correct option. "ref" is a short string.`;
 
   const res = await fetch(`${BASE_URL}/chat/completions`, {

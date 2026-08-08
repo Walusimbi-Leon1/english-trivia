@@ -259,9 +259,9 @@ async function generateQuestions(count, env, avoidTexts) {
 - "Which of these is a well-known [idiom/proverb/cliché]?" (4 phrases, one real)
 - Category questions ("What type of phrase is X?") only when unambiguous
 Vary the difficulty. Every question must have exactly one correct answer based on standard English usage.${avoid}
-For every question include a "ref" — the source phrase or category, like "idiom: bite the bullet" or "proverb: all that glitters is not gold".
+For every question include a "ref" — the CATEGORY ONLY (e.g. "idiom", "proverb", "colloquialism", "jargon", "euphemism", "maxims-aphorisms", "cliches"). Never include the phrase itself in ref — it would leak the answer.
 Return ONLY a JSON array (no markdown) with exactly this structure:
-[{"question":"Question text?","options":["A","B","C","D"],"correctAnswer":0,"ref":"idiom: bite the bullet"}]
+[{"question":"Question text?","options":["A","B","C","D"],"correctAnswer":0,"ref":"idiom"}]
 "correctAnswer" must be the index (0-3) of the correct option.`;
   const raw = await generateWithOpenCode(prompt, env);
   return parseQuestions(raw, count);

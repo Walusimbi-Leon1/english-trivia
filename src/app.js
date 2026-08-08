@@ -340,11 +340,14 @@ function renderQuestion(q) {
 
   $("q-text").textContent = question.question;
 
-  // Phrase reference (questions carry a ref, e.g. "idiom: bite the bullet")
+  // Phrase reference — show ONLY the category ("📖 idiom", "📖 proverb", …).
+  // Never show the phrase itself: refs are "category: phrase" and the phrase
+  // is the answer, so displaying it leaks the correct choice.
   const refEl = $("q-ref");
   if (refEl) {
-    if (question.ref) {
-      refEl.textContent = `📖 ${question.ref}`;
+    const cat = question.ref ? question.ref.split(":")[0].trim() : "";
+    if (cat) {
+      refEl.textContent = `📖 ${cat}`;
       refEl.classList.remove("hidden");
     } else {
       refEl.classList.add("hidden");

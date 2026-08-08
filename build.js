@@ -89,7 +89,7 @@ function buildFallbackBank() {
       q: `What does the phrase “${e.p}” mean?`,
       o: options,
       a: correct,
-      ref: `${e.cat}: ${e.p}`,
+      ref: e.cat, // category only — never the phrase (it's the answer)
     });
   }
   console.log(`Fallback bank: ${bank.length} questions from ${entries.length} phrases (${fs.readdirSync(DATA).filter((f) => f.endsWith(".json")).length} files)`);
