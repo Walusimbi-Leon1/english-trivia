@@ -20,7 +20,7 @@ node build.js
 
 BOUNDARY="----bt-deploy-$(date +%s)"
 METADATA=$(cat <<JSON
-{"main_module":"worker.js","bindings":[{"type":"plain_text","name":"REDIRECT_URI","text":"https://${NAME}.walusimbileon1.workers.dev"},{"type":"plain_text","name":"FB_HOST","text":"pop-party-1-default-rtdb.firebaseio.com"},{"type":"plain_text","name":"MODEL","text":"big-pickle"},{"type":"plain_text","name":"DISCORD_CLIENT_ID","text":"${DISCORD_CLIENT_ID}"}]}
+{"main_module":"worker.js","compatibility_date":"2026-08-08","bindings":[{"type":"plain_text","name":"REDIRECT_URI","text":"https://${NAME}.walusimbileon1.workers.dev"},{"type":"plain_text","name":"FB_HOST","text":"pop-party-1-default-rtdb.firebaseio.com"},{"type":"plain_text","name":"MODEL","text":"big-pickle"},{"type":"plain_text","name":"DISCORD_CLIENT_ID","text":"${DISCORD_CLIENT_ID}"}]}
 JSON
 )
 
@@ -37,12 +37,27 @@ JSON
 } > /tmp/bt-upload.bin
 
 echo "Uploading $(wc -c < /tmp/bt-upload.bin) bytes..."
-RESP=$(curl -s -X PUT \
+# NOTE (2026-08-08): plain PUT /workers/scripts/{name} now only creates a
+# PREVIEW version on this account (has_preview: true, no deployment). Use the
+# modern flow: upload a version, then explicitly deploy it.
+VERSION_RESP=$(curl -s -X POST \
   -H "Authorization: Bearer $CF_API_TOKEN" \
   -H "Content-Type: multipart/form-data; boundary=$BOUNDARY" \
   --data-binary @/tmp/bt-upload.bin \
-  "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/$NAME")
-echo "$RESP" | jq -c '{success, errors: [.errors[].message], id: .result.id, modified: .result.modified_on}'
+  "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/$NAME/versions")
+echo "$VERSION_RESP" | jq -c '{success, errors: [.errors[].message], version_id: .result.id}'
+VERSION_ID=$(echo "$VERSION_RESP" | jq -r '.result.id // empty')
+if [ -z "$VERSION_ID" ]; then
+  echo "FAILED: no version id from upload" >&2
+  exit 1
+fi
+
+DEPLOY_RESP=$(curl -s -X POST \
+  -H "Authorization: Bearer $CF_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/$NAME/deployments" \
+  --data "{\"strategy\":\"percentage\",\"versions\":[{\"version_id\":\"$VERSION_ID\",\"percentage\":100}]}")
+echo "$DEPLOY_RESP" | jq -c '{success, errors: [.errors[].message], deployment_id: .result.id}'
 
 # Secrets are stored encrypted on the script and persist across deploys.
 # (Re)set them so a fresh clone can deploy with just env vars:

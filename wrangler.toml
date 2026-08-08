@@ -10,7 +10,7 @@ compatibility_date = "2026-08-08"
 
 [vars]
 # Discord OAuth (confidential client) — client ID is public.
-DISCORD_CLIENT_ID = "REPLACE_WITH_ENGLISH_TRIVIA_CLIENT_ID"
+DISCORD_CLIENT_ID = "1535697137533194271"
 # IMPORTANT: must match the redirect URI registered in the Discord
 # Developer Portal EXACTLY (no trailing slash — matches Leon's authorize link).
 REDIRECT_URI = "https://english-trivia.walusimbileon1.workers.dev"
