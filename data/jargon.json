@@ -1,0 +1,882 @@
+[
+  {
+    "p": "blue sky thinking",
+    "m": "creative thinking with no practical limits or constraints"
+  },
+  {
+    "p": "boil the ocean",
+    "m": "attempt something impossible or overwhelmingly difficult"
+  },
+  {
+    "p": "circle back",
+    "m": "return to a topic or person later"
+  },
+  {
+    "p": "move the goalposts",
+    "m": "change the rules or targets to make success harder"
+  },
+  {
+    "p": "low-hanging fruit",
+    "m": "easiest tasks or goals to achieve first"
+  },
+  {
+    "p": "paradigm shift",
+    "m": "a fundamental change in approach or thinking"
+  },
+  {
+    "p": "best practice",
+    "m": "a method widely accepted as the most effective"
+  },
+  {
+    "p": "bleeding edge",
+    "m": "technology or innovation that is extremely new and experimental"
+  },
+  {
+    "p": "buy-in",
+    "m": "agreement or support from a person or group"
+  },
+  {
+    "p": "core competency",
+    "m": "a company's primary area of expertise or strength"
+  },
+  {
+    "p": "deliverable",
+    "m": "a tangible product or result promised to a client"
+  },
+  {
+    "p": "elevator pitch",
+    "m": "a brief persuasive summary of an idea or product"
+  },
+  {
+    "p": "game changer",
+    "m": "an event or idea that drastically alters a situation"
+  },
+  {
+    "p": "helicopter view",
+    "m": "an overview that sees the big picture without details"
+  },
+  {
+    "p": "in the loop",
+    "m": "kept informed about a situation or decision"
+  },
+  {
+    "p": "level playing field",
+    "m": "a fair situation where everyone has equal opportunity"
+  },
+  {
+    "p": "move the needle",
+    "m": "make a noticeable difference or meaningful impact"
+  },
+  {
+    "p": "peel the onion",
+    "m": "examine a problem layer by layer to reveal deeper issues"
+  },
+  {
+    "p": "pick someone's brain",
+    "m": "ask someone for advice or ideas on a topic"
+  },
+  {
+    "p": "punt",
+    "m": "defer a decision or responsibility to someone else"
+  },
+  {
+    "p": "quick win",
+    "m": "an easy success that brings immediate benefit"
+  },
+  {
+    "p": "silo",
+    "m": "a department or group that does not share information with others"
+  },
+  {
+    "p": "stakeholder",
+    "m": "a person with an interest or concern in a project"
+  },
+  {
+    "p": "synergy",
+    "m": "combined effect greater than the sum of separate efforts"
+  },
+  {
+    "p": "take offline",
+    "m": "discuss a topic privately or outside a formal meeting"
+  },
+  {
+    "p": "touch base",
+    "m": "make contact or briefly update someone"
+  },
+  {
+    "p": "value add",
+    "m": "an extra feature or benefit that increases worth"
+  },
+  {
+    "p": "win-win",
+    "m": "a result that benefits all sides involved"
+  },
+  {
+    "p": "bandwidth",
+    "m": "available time, energy, or capacity to handle work"
+  },
+  {
+    "p": "deep dive",
+    "m": "a thorough and detailed examination of a topic"
+  },
+  {
+    "p": "drill down",
+    "m": "go deeper into details or specific data"
+  },
+  {
+    "p": "ducks in a row",
+    "m": "things organized and prepared for action"
+  },
+  {
+    "p": "hit the ground running",
+    "m": "begin a task energetically and with immediate progress"
+  },
+  {
+    "p": "learn the ropes",
+    "m": "become familiar with the basics of a job or activity"
+  },
+  {
+    "p": "pave the way",
+    "m": "make it easier for something to happen later"
+  },
+  {
+    "p": "run it up the flagpole",
+    "m": "propose an idea to see what reaction it gets"
+  },
+  {
+    "p": "scope creep",
+    "m": "gradual expansion of a project beyond its original goals"
+  },
+  {
+    "p": "smoke and mirrors",
+    "m": "misleading or deceptive presentation of facts"
+  },
+  {
+    "p": "square the circle",
+    "m": "try to achieve something impossible or contradictory"
+  },
+  {
+    "p": "steer clear",
+    "m": "avoid a person, place, or situation deliberately"
+  },
+  {
+    "p": "the bottom line",
+    "m": "the most important result or final deciding factor"
+  },
+  {
+    "p": "the elephant in the room",
+    "m": "an obvious major issue that everyone avoids mentioning"
+  },
+  {
+    "p": "under the radar",
+    "m": "without being noticed or attracting attention"
+  },
+  {
+    "p": "up to speed",
+    "m": "having the latest information or full knowledge"
+  },
+  {
+    "p": "wheelhouse",
+    "m": "an area of great expertise, skill, or interest"
+  },
+  {
+    "p": "action items",
+    "m": "specific tasks assigned during a meeting"
+  },
+  {
+    "p": "all hands on deck",
+    "m": "everyone available must help with the situation"
+  },
+  {
+    "p": "at the end of the day",
+    "m": "ultimately, after considering everything"
+  },
+  {
+    "p": "best of breed",
+    "m": "the best available item in its category"
+  },
+  {
+    "p": "big picture",
+    "m": "the overall perspective rather than minor details"
+  },
+  {
+    "p": "blue ocean",
+    "m": "a new market with no competition"
+  },
+  {
+    "p": "boots on the ground",
+    "m": "people actively working in a real situation"
+  },
+  {
+    "p": "brain dump",
+    "m": "quickly share all you know about a topic"
+  },
+  {
+    "p": "burn rate",
+    "m": "speed at which a company spends money"
+  },
+  {
+    "p": "change management",
+    "m": "structured approach to helping people accept organizational change"
+  },
+  {
+    "p": "close the loop",
+    "m": "follow up to confirm something is completed"
+  },
+  {
+    "p": "come to the table",
+    "m": "be willing to negotiate or contribute"
+  },
+  {
+    "p": "customer journey",
+    "m": "full experience a customer has with a brand"
+  },
+  {
+    "p": "cutting edge",
+    "m": "using the most advanced technology available"
+  },
+  {
+    "p": "delta",
+    "m": "the amount of change or difference"
+  },
+  {
+    "p": "double down",
+    "m": "become more committed or increase effort"
+  },
+  {
+    "p": "due diligence",
+    "m": "careful investigation before making a decision"
+  },
+  {
+    "p": "empower",
+    "m": "give someone authority or confidence to act"
+  },
+  {
+    "p": "end-to-end",
+    "m": "covering a complete process from start to finish"
+  },
+  {
+    "p": "flesh out",
+    "m": "add more details to make something complete"
+  },
+  {
+    "p": "go-forward",
+    "m": "relating to the future plan"
+  },
+  {
+    "p": "granular",
+    "m": "including very fine and detailed information"
+  },
+  {
+    "p": "hard stop",
+    "m": "a fixed time when something must end"
+  },
+  {
+    "p": "high-level",
+    "m": "not detailed; broad summary"
+  },
+  {
+    "p": "in the weeds",
+    "m": "lost in tedious details or small issues"
+  },
+  {
+    "p": "incentivize",
+    "m": "motivate someone by offering a reward"
+  },
+  {
+    "p": "key takeaway",
+    "m": "the most important point to remember"
+  },
+  {
+    "p": "learnings",
+    "m": "useful lessons gained from experience"
+  },
+  {
+    "p": "leverage",
+    "m": "use something to maximum advantage"
+  },
+  {
+    "p": "marching orders",
+    "m": "clear instructions to begin a task"
+  },
+  {
+    "p": "mindshare",
+    "m": "degree of consumer awareness or attention"
+  },
+  {
+    "p": "mission critical",
+    "m": "absolutely essential to an operation's success"
+  },
+  {
+    "p": "net-net",
+    "m": "the overall result after all factors"
+  },
+  {
+    "p": "onboarding",
+    "m": "process of integrating a new employee or user"
+  },
+  {
+    "p": "pain point",
+    "m": "a recurring problem customers want solved"
+  },
+  {
+    "p": "parking lot",
+    "m": "postpone a topic for later discussion"
+  },
+  {
+    "p": "ping",
+    "m": "send a brief message to someone"
+  },
+  {
+    "p": "playbook",
+    "m": "a set of standard strategies or procedures"
+  },
+  {
+    "p": "price point",
+    "m": "the suggested selling price of a product"
+  },
+  {
+    "p": "proactive",
+    "m": "acting in advance to prevent problems"
+  },
+  {
+    "p": "push back",
+    "m": "resist or challenge a proposal"
+  },
+  {
+    "p": "put a pin in it",
+    "m": "set a topic aside for now"
+  },
+  {
+    "p": "reaching out",
+    "m": "contacting someone to begin communication"
+  },
+  {
+    "p": "robust",
+    "m": "strong, reliable, and effective"
+  },
+  {
+    "p": "run the numbers",
+    "m": "calculate or analyze financial figures"
+  },
+  {
+    "p": "sea change",
+    "m": "major and significant transformation"
+  },
+  {
+    "p": "skunkworks",
+    "m": "small independent team doing innovative projects"
+  },
+  {
+    "p": "soup to nuts",
+    "m": "covering every step from beginning to end"
+  },
+  {
+    "p": "standing meeting",
+    "m": "a regularly scheduled meeting"
+  },
+  {
+    "p": "sweet spot",
+    "m": "ideal combination or optimal point"
+  },
+  {
+    "p": "takeaway",
+    "m": "the main message or lesson learned"
+  },
+  {
+    "p": "thought leader",
+    "m": "person recognized as an authority in their field"
+  },
+  {
+    "p": "throughput",
+    "m": "amount of work produced in a given time"
+  },
+  {
+    "p": "value proposition",
+    "m": "statement of benefits a product offers"
+  },
+  {
+    "p": "A/B testing",
+    "m": "comparing two versions to see which performs better"
+  },
+  {
+    "p": "above my pay grade",
+    "m": "not something I have the authority or knowledge to decide"
+  },
+  {
+    "p": "acid test",
+    "m": "decisive test proving worth or validity"
+  },
+  {
+    "p": "all hat and no cattle",
+    "m": "talking big but lacking substance or follow-through"
+  },
+  {
+    "p": "blue-ribbon panel",
+    "m": "group of experts chosen to investigate or advise"
+  },
+  {
+    "p": "boil down to",
+    "m": "be the most essential point or cause"
+  },
+  {
+    "p": "bootstrapping",
+    "m": "building a business with little or no external funding"
+  },
+  {
+    "p": "brainstorm",
+    "m": "group discussion to generate ideas"
+  },
+  {
+    "p": "cash cow",
+    "m": "reliable source of steady profit"
+  },
+  {
+    "p": "catch-22",
+    "m": "no-win situation where escape is impossible due to contradictory rules"
+  },
+  {
+    "p": "cherry-pick",
+    "m": "select only the best or most desirable items"
+  },
+  {
+    "p": "core message",
+    "m": "central idea a brand or campaign wants to convey"
+  },
+  {
+    "p": "cost-benefit analysis",
+    "m": "evaluation comparing costs and benefits of a decision"
+  },
+  {
+    "p": "cradle to grave",
+    "m": "covering the entire life cycle from beginning to end"
+  },
+  {
+    "p": "cutting-room floor",
+    "m": "left out of a final version or release"
+  },
+  {
+    "p": "dog-and-pony show",
+    "m": "elaborate presentation meant to impress or persuade"
+  },
+  {
+    "p": "drinking from a firehose",
+    "m": "being overwhelmed by too much information at once"
+  },
+  {
+    "p": "drop the ball",
+    "m": "make a mistake or fail to handle a responsibility"
+  },
+  {
+    "p": "end run",
+    "m": "maneuver that avoids normal channels or rules"
+  },
+  {
+    "p": "fishing expedition",
+    "m": "investigation without clear aim, hoping to find evidence"
+  },
+  {
+    "p": "for all intents and purposes",
+    "m": "in effect; practically or essentially"
+  },
+  {
+    "p": "from the get-go",
+    "m": "from the very beginning"
+  },
+  {
+    "p": "full-court press",
+    "m": "maximum effort or pressure to achieve a goal"
+  },
+  {
+    "p": "green light",
+    "m": "permission to proceed with a project"
+  },
+  {
+    "p": "guru",
+    "m": "acknowledged expert or guide"
+  },
+  {
+    "p": "hail Mary",
+    "m": "desperate final attempt with little chance of success"
+  },
+  {
+    "p": "hardball",
+    "m": "tough, uncompromising tactics or negotiation"
+  },
+  {
+    "p": "herding cats",
+    "m": "trying to control a group that is disorganized or independent"
+  },
+  {
+    "p": "hold the fort",
+    "m": "take care of things while someone is away"
+  },
+  {
+    "p": "honeymoon period",
+    "m": "early phase when criticism is unlikely or absent"
+  },
+  {
+    "p": "ironclad",
+    "m": "impossible to break or argue against"
+  },
+  {
+    "p": "keep your eye on the prize",
+    "m": "maintain focus on the ultimate goal"
+  },
+  {
+    "p": "knock it out of the park",
+    "m": "achieve a great success or excellent result"
+  },
+  {
+    "p": "lead time",
+    "m": "time between planning and completion"
+  },
+  {
+    "p": "lift and shift",
+    "m": "move an application or system to a new environment without redesigning it"
+  },
+  {
+    "p": "long shot",
+    "m": "attempt with little chance of success"
+  },
+  {
+    "p": "make inroads",
+    "m": "make progress toward a goal or into a market"
+  },
+  {
+    "p": "moot point",
+    "m": "issue that is no longer relevant or is debatable"
+  },
+  {
+    "p": "movers and shakers",
+    "m": "influential people who get things done"
+  },
+  {
+    "p": "no-brainer",
+    "m": "decision or choice that is very easy and obvious"
+  },
+  {
+    "p": "not rocket science",
+    "m": "not difficult to understand or do"
+  },
+  {
+    "p": "bang for the buck",
+    "m": "value received for money spent"
+  },
+  {
+    "p": "break-even point",
+    "m": "moment when costs equal revenues"
+  },
+  {
+    "p": "brownfield site",
+    "m": "previously developed land for reuse"
+  },
+  {
+    "p": "burning platform",
+    "m": "urgent situation demanding immediate action"
+  },
+  {
+    "p": "cash flow",
+    "m": "movement of money in and out"
+  },
+  {
+    "p": "change agent",
+    "m": "person who drives organizational transformation"
+  },
+  {
+    "p": "churn rate",
+    "m": "percentage of customers leaving over time"
+  },
+  {
+    "p": "competitive advantage",
+    "m": "condition that lets a company outperform rivals"
+  },
+  {
+    "p": "conversion funnel",
+    "m": "path from initial interest to final purchase"
+  },
+  {
+    "p": "core values",
+    "m": "fundamental beliefs guiding an organization"
+  },
+  {
+    "p": "cross-functional",
+    "m": "involving people from multiple departments"
+  },
+  {
+    "p": "customer acquisition cost",
+    "m": "total cost required to gain a customer"
+  },
+  {
+    "p": "data-driven",
+    "m": "guided by facts rather than intuition"
+  },
+  {
+    "p": "decision fatigue",
+    "m": "worsening judgment after many decisions"
+  },
+  {
+    "p": "domain expertise",
+    "m": "deep specialized knowledge in a field"
+  },
+  {
+    "p": "earned media",
+    "m": "publicity received without paying for ads"
+  },
+  {
+    "p": "economies of scale",
+    "m": "cost savings from producing more"
+  },
+  {
+    "p": "exit strategy",
+    "m": "plan for ending involvement or investment"
+  },
+  {
+    "p": "first-mover advantage",
+    "m": "benefit gained by entering a market first"
+  },
+  {
+    "p": "glass ceiling",
+    "m": "invisible barrier preventing career advancement"
+  },
+  {
+    "p": "human capital",
+    "m": "collective skills and knowledge of employees"
+  },
+  {
+    "p": "incentive",
+    "m": "something that motivates or encourages a person"
+  },
+  {
+    "p": "industry standard",
+    "m": "widely accepted norm or benchmark"
+  },
+  {
+    "p": "integrated solution",
+    "m": "product combining multiple components into one"
+  },
+  {
+    "p": "knowledge transfer",
+    "m": "process of sharing expertise between people"
+  },
+  {
+    "p": "lean methodology",
+    "m": "approach focused on minimizing waste"
+  },
+  {
+    "p": "market segmentation",
+    "m": "dividing customers into distinct groups"
+  },
+  {
+    "p": "milestone",
+    "m": "important event or stage of progress"
+  },
+  {
+    "p": "net present value",
+    "m": "current worth of future cash flows"
+  },
+  {
+    "p": "opportunity cost",
+    "m": "value of the next best alternative forgone"
+  },
+  {
+    "p": "out of pocket",
+    "m": "unavailable or unable to be reached"
+  },
+  {
+    "p": "pipeline",
+    "m": "series of upcoming deals or projects"
+  },
+  {
+    "p": "plug and play",
+    "m": "ready to work immediately without setup"
+  },
+  {
+    "p": "proof of concept",
+    "m": "demonstration that an idea is feasible"
+  },
+  {
+    "p": "quality assurance",
+    "m": "process of ensuring products meet standards"
+  },
+  {
+    "p": "return on investment",
+    "m": "gain or loss relative to money invested"
+  },
+  {
+    "p": "roadmap",
+    "m": "strategic plan showing steps and timeline"
+  },
+  {
+    "p": "scalability",
+    "m": "ability to grow without performance loss"
+  },
+  {
+    "p": "sweat equity",
+    "m": "value created through hard work rather than money"
+  },
+  {
+    "p": "traction",
+    "m": "measurable progress or momentum"
+  },
+  {
+    "p": "turnkey",
+    "m": "fully ready for immediate use"
+  },
+  {
+    "p": "upside",
+    "m": "potential for gain or profit"
+  },
+  {
+    "p": "downside",
+    "m": "potential for loss or disadvantage"
+  },
+  {
+    "p": "upsell",
+    "m": "encourage customer to buy a more expensive product"
+  },
+  {
+    "p": "viral",
+    "m": "spreading very quickly through online sharing"
+  },
+  {
+    "p": "white paper",
+    "m": "authoritative report on a specific topic"
+  },
+  {
+    "p": "window of opportunity",
+    "m": "limited period during which action is possible"
+  },
+  {
+    "p": "workaround",
+    "m": "temporary fix bypassing a problem"
+  },
+  {
+    "p": "analysis paralysis",
+    "m": "overthinking that prevents decision making"
+  },
+  {
+    "p": "benchmark",
+    "m": "standard against which things are measured"
+  },
+  {
+    "p": "sprint",
+    "m": "a short focused period of work in agile development"
+  },
+  {
+    "p": "stand-up",
+    "m": "a brief daily meeting where team members share progress"
+  },
+  {
+    "p": "backlog",
+    "m": "a prioritized list of tasks awaiting completion"
+  },
+  {
+    "p": "velocity",
+    "m": "the amount of work a team completes in a sprint"
+  },
+  {
+    "p": "epic",
+    "m": "a large body of work broken into smaller tasks"
+  },
+  {
+    "p": "technical debt",
+    "m": "future cost caused by choosing an easy solution now"
+  },
+  {
+    "p": "feature creep",
+    "m": "adding more features than users need, making a product complicated"
+  },
+  {
+    "p": "data lake",
+    "m": "a central storage system for huge amounts of raw data"
+  },
+  {
+    "p": "single source of truth",
+    "m": "one authoritative data source used by everyone"
+  },
+  {
+    "p": "omnichannel",
+    "m": "giving customers a seamless experience across all channels"
+  },
+  {
+    "p": "net promoter score",
+    "m": "a metric measuring customer willingness to recommend a company"
+  },
+  {
+    "p": "click-through rate",
+    "m": "the percentage of people who click a link or ad"
+  },
+  {
+    "p": "conversion rate",
+    "m": "the percentage of visitors who complete a wanted action"
+  },
+  {
+    "p": "bounce rate",
+    "m": "the percentage of visitors who leave after viewing one page"
+  },
+  {
+    "p": "search engine optimization",
+    "m": "improving a website's visibility in search engine results"
+  },
+  {
+    "p": "content marketing",
+    "m": "using content to attract and retain customers"
+  },
+  {
+    "p": "influencer",
+    "m": "a person whose recommendations can sway consumer choices"
+  },
+  {
+    "p": "gamification",
+    "m": "adding game elements to non-game contexts to boost engagement"
+  },
+  {
+    "p": "blockchain",
+    "m": "a digital ledger of transactions shared across a network"
+  },
+  {
+    "p": "smart contract",
+    "m": "a contract that executes automatically when conditions are met"
+  },
+  {
+    "p": "metaverse",
+    "m": "a persistent virtual world where users can interact"
+  },
+  {
+    "p": "augmented reality",
+    "m": "digital information overlaid on the physical world"
+  },
+  {
+    "p": "virtual reality",
+    "m": "a simulated three-dimensional environment users can explore"
+  },
+  {
+    "p": "digital transformation",
+    "m": "integrating digital technology into all areas of a business"
+  },
+  {
+    "p": "agile",
+    "m": "a way of managing projects with frequent iteration and flexibility"
+  },
+  {
+    "p": "DevOps",
+    "m": "a practice that combines software development and IT operations"
+  },
+  {
+    "p": "serverless",
+    "m": "a cloud model where code runs without managing servers"
+  },
+  {
+    "p": "containerization",
+    "m": "packaging software with its dependencies into isolated units"
+  },
+  {
+    "p": "API",
+    "m": "a set of rules that lets software applications communicate"
+  },
+  {
+    "p": "edge case",
+    "m": "an unusual scenario that falls outside normal parameters"
+  }
+]

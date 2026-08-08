@@ -1,0 +1,294 @@
+[
+  {
+    "p": "don't count your chickens before they hatch",
+    "m": "don't rely on something before it actually happens"
+  },
+  {
+    "p": "when life gives you lemons, make lemonade",
+    "m": "make the best of a bad situation"
+  },
+  {
+    "p": "low-hanging fruit",
+    "m": "the easiest thing to achieve in a task"
+  },
+  {
+    "p": "learning curve",
+    "m": "the time needed to learn a new skill"
+  },
+  {
+    "p": "don't judge a book by its cover",
+    "m": "don't judge someone only by their appearance"
+  },
+  {
+    "p": "devil's advocate",
+    "m": "someone who argues the opposite side to test an idea"
+  },
+  {
+    "p": "no-brainer",
+    "m": "an easy decision that requires little thought"
+  },
+  {
+    "p": "pitch in",
+    "m": "help by contributing to a joint effort"
+  },
+  {
+    "p": "you can't have your cake and eat it too",
+    "m": "cannot enjoy two good things that are incompatible"
+  },
+  {
+    "p": "avoid like the plague",
+    "m": "stay away from something completely"
+  },
+  {
+    "p": "blessing in disguise",
+    "m": "a misfortune that brings an unexpected good result"
+  },
+  {
+    "p": "by the book",
+    "m": "strictly follow rules and procedures"
+  },
+  {
+    "p": "close call",
+    "m": "a narrow escape from danger or disaster"
+  },
+  {
+    "p": "don't rock the boat",
+    "m": "do not disturb a stable situation"
+  },
+  {
+    "p": "hit the hay",
+    "m": "go to bed"
+  },
+  {
+    "p": "put all your eggs in one basket",
+    "m": "depend completely on one plan or person"
+  },
+  {
+    "p": "rain cats and dogs",
+    "m": "rain very heavily"
+  },
+  {
+    "p": "steal someone's thunder",
+    "m": "take attention from someone by upstaging them"
+  },
+  {
+    "p": "you can lead a horse to water but you can't make it drink",
+    "m": "you cannot force someone to do something"
+  },
+  {
+    "p": "cut the mustard",
+    "m": "meet the required standard"
+  },
+  {
+    "p": "pull someone's leg",
+    "m": "tease or joke playfully"
+  },
+  {
+    "p": "when in Rome, do as the Romans do",
+    "m": "adapt to the customs of the place you are visiting"
+  },
+  {
+    "p": "don't bite off more than you can chew",
+    "m": "don't take on more than you can handle"
+  },
+  {
+    "p": "feel under the weather",
+    "m": "feel slightly ill"
+  },
+  {
+    "p": "burn your bridges",
+    "m": "do something that makes it impossible to return to a previous situation"
+  },
+  {
+    "p": "calm before the storm",
+    "m": "a quiet period just before trouble arrives"
+  },
+  {
+    "p": "crack of dawn",
+    "m": "very early in the morning"
+  },
+  {
+    "p": "crystal clear",
+    "m": "impossible to misunderstand; perfectly obvious"
+  },
+  {
+    "p": "dime a dozen",
+    "m": "very common and not especially valuable"
+  },
+  {
+    "p": "down to earth",
+    "m": "practical, sensible, and unpretentious"
+  },
+  {
+    "p": "head in the clouds",
+    "m": "unrealistic or not paying attention to reality"
+  },
+  {
+    "p": "icing on the cake",
+    "m": "an added benefit that makes a good situation even better"
+  },
+  {
+    "p": "once bitten, twice shy",
+    "m": "after a bad experience you are more cautious"
+  },
+  {
+    "p": "put your best foot forward",
+    "m": "try to make a good first impression"
+  },
+  {
+    "p": "all's fair in love and war",
+    "m": "any behavior is acceptable in certain intense situations"
+  },
+  {
+    "p": "apple doesn't fall far from the tree",
+    "m": "children resemble their parents in behavior"
+  },
+  {
+    "p": "as easy as pie",
+    "m": "extremely simple to do"
+  },
+  {
+    "p": "cat got your tongue?",
+    "m": "why are you not speaking"
+  },
+  {
+    "p": "caught red-handed",
+    "m": "caught in the act of doing something wrong"
+  },
+  {
+    "p": "don't cry over spilled milk",
+    "m": "don't waste time regretting what cannot be changed"
+  },
+  {
+    "p": "in the same boat",
+    "m": "in the same difficult situation"
+  },
+  {
+    "p": "out of left field",
+    "m": "completely unexpected; from nowhere"
+  },
+  {
+    "p": "rain on your parade",
+    "m": "spoil someone's plans or excitement"
+  },
+  {
+    "p": "an arm and a leg",
+    "m": "a very large amount of money"
+  },
+  {
+    "p": "foot in the door",
+    "m": "initial opportunity that opens further chances"
+  },
+  {
+    "p": "green with envy",
+    "m": "feeling extremely jealous of someone"
+  },
+  {
+    "p": "have a heart of gold",
+    "m": "be kind and generous"
+  },
+  {
+    "p": "hear it on the grapevine",
+    "m": "learn a rumor or news informally"
+  },
+  {
+    "p": "it's not rocket science",
+    "m": "not complicated to understand"
+  },
+  {
+    "p": "pull the plug",
+    "m": "stop something from continuing"
+  },
+  {
+    "p": "stab in the back",
+    "m": "harm someone who trusted you"
+  },
+  {
+    "p": "the bigger they are, the harder they fall",
+    "m": "large or powerful people can suffer bigger failures"
+  },
+  {
+    "p": "hindsight is 20/20",
+    "m": "it is easier to understand events after they happen"
+  },
+  {
+    "p": "no pain, no gain",
+    "m": "effort and sacrifice are needed to achieve something"
+  },
+  {
+    "p": "time flies when you're having fun",
+    "m": "time seems to pass quickly when you enjoy yourself"
+  },
+  {
+    "p": "two wrongs don't make a right",
+    "m": "retaliating is not an acceptable way to correct a wrong"
+  },
+  {
+    "p": "you can't teach an old dog new tricks",
+    "m": "older people often find it hard to master new methods"
+  },
+  {
+    "p": "you made your bed, now lie in it",
+    "m": "you must accept the consequences of your own actions"
+  },
+  {
+    "p": "there's no smoke without fire",
+    "m": "a rumor usually has some basis in fact"
+  },
+  {
+    "p": "where there's a will, there's a way",
+    "m": "determination can overcome any obstacle"
+  },
+  {
+    "p": "not a leg to stand on",
+    "m": "having no valid excuse or supporting evidence"
+  },
+  {
+    "p": "win-win situation",
+    "m": "an outcome that benefits all the parties involved"
+  },
+  {
+    "p": "easy come, easy go",
+    "m": "things gained easily are easily lost"
+  },
+  {
+    "p": "not the sharpest knife in the drawer",
+    "m": "not very clever or intelligent"
+  },
+  {
+    "p": "six of one, half a dozen of the other",
+    "m": "two options are basically the same"
+  },
+  {
+    "p": "butterflies in my stomach",
+    "m": "feel nervous before something important"
+  },
+  {
+    "p": "skeletons in the closet",
+    "m": "hidden secrets that cause embarrassment"
+  },
+  {
+    "p": "wet blanket",
+    "m": "person who ruins everyone's fun"
+  },
+  {
+    "p": "wolf in sheep's clothing",
+    "m": "dangerous person pretending to be harmless"
+  },
+  {
+    "p": "straight from the horse's mouth",
+    "m": "from the most reliable source"
+  },
+  {
+    "p": "by and large",
+    "m": "in general, on the whole"
+  },
+  {
+    "p": "bite your tongue",
+    "m": "stay silent despite wanting to speak"
+  },
+  {
+    "p": "needle in a haystack",
+    "m": "something extremely hard to find"
+  }
+]

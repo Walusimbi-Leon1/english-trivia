@@ -1,0 +1,874 @@
+[
+  {
+    "p": "passed away",
+    "m": "is no longer alive"
+  },
+  {
+    "p": "no longer with us",
+    "m": "has died and is gone from this world"
+  },
+  {
+    "p": "in a better place",
+    "m": "has died and is believed to be free of suffering"
+  },
+  {
+    "p": "at rest",
+    "m": "has died and is no longer suffering"
+  },
+  {
+    "p": "put to sleep",
+    "m": "euthanize an animal to end its suffering"
+  },
+  {
+    "p": "put down",
+    "m": "kill an animal humanely to end its suffering"
+  },
+  {
+    "p": "six feet under",
+    "m": "dead and buried in a grave"
+  },
+  {
+    "p": "give up the ghost",
+    "m": "die or stop working completely"
+  },
+  {
+    "p": "bite the dust",
+    "m": "die or fail completely"
+  },
+  {
+    "p": "laid to rest",
+    "m": "is buried after dying"
+  },
+  {
+    "p": "gone to meet one's maker",
+    "m": "died and gone to face God"
+  },
+  {
+    "p": "between jobs",
+    "m": "is unemployed at the moment"
+  },
+  {
+    "p": "let go",
+    "m": "dismissed from a job"
+  },
+  {
+    "p": "made redundant",
+    "m": "dismissed because the job is no longer needed"
+  },
+  {
+    "p": "downsizing",
+    "m": "reducing the number of employees in a company"
+  },
+  {
+    "p": "early retirement",
+    "m": "stopping work earlier than usual, often after being dismissed"
+  },
+  {
+    "p": "career transition",
+    "m": "a period of job change, often after being fired"
+  },
+  {
+    "p": "pink slip",
+    "m": "written notice that a person has been fired"
+  },
+  {
+    "p": "restroom",
+    "m": "a room containing a toilet"
+  },
+  {
+    "p": "comfort station",
+    "m": "a public building containing toilets"
+  },
+  {
+    "p": "powder room",
+    "m": "a polite word for a bathroom"
+  },
+  {
+    "p": "use the facilities",
+    "m": "go to the toilet"
+  },
+  {
+    "p": "spend a penny",
+    "m": "go to use a public toilet"
+  },
+  {
+    "p": "answer the call of nature",
+    "m": "go to the toilet"
+  },
+  {
+    "p": "powder my nose",
+    "m": "go to the toilet, especially to urinate"
+  },
+  {
+    "p": "pass water",
+    "m": "expel urine from the body"
+  },
+  {
+    "p": "number one",
+    "m": "go to the toilet to urinate"
+  },
+  {
+    "p": "number two",
+    "m": "go to the toilet to defecate"
+  },
+  {
+    "p": "the birds and the bees",
+    "m": "basic facts about sex and reproduction"
+  },
+  {
+    "p": "sleep with someone",
+    "m": "have sexual intercourse with someone"
+  },
+  {
+    "p": "make love",
+    "m": "have sexual intercourse"
+  },
+  {
+    "p": "get intimate",
+    "m": "engage in sexual activity"
+  },
+  {
+    "p": "in a family way",
+    "m": "is going to have a baby"
+  },
+  {
+    "p": "bun in the oven",
+    "m": "is carrying an unborn baby"
+  },
+  {
+    "p": "expecting",
+    "m": "is going to have a baby"
+  },
+  {
+    "p": "adult entertainment",
+    "m": "pornographic films and material"
+  },
+  {
+    "p": "lady of the evening",
+    "m": "woman who works as a prostitute"
+  },
+  {
+    "p": "call girl",
+    "m": "prostitute who makes appointments by phone"
+  },
+  {
+    "p": "sex worker",
+    "m": "person who provides sexual services for money"
+  },
+  {
+    "p": "economical with the truth",
+    "m": "intentionally not telling the full truth"
+  },
+  {
+    "p": "bend the truth",
+    "m": "say something that is not completely true"
+  },
+  {
+    "p": "fib",
+    "m": "tell a small unimportant lie"
+  },
+  {
+    "p": "white lie",
+    "m": "a small harmless lie often told to be kind"
+  },
+  {
+    "p": "creative accounting",
+    "m": "fraudulent or misleading financial reporting"
+  },
+  {
+    "p": "creative differences",
+    "m": "disagreement that causes someone to leave a project"
+  },
+  {
+    "p": "senior citizen",
+    "m": "elderly person, usually retired"
+  },
+  {
+    "p": "golden years",
+    "m": "the time of life after retirement"
+  },
+  {
+    "p": "getting on in years",
+    "m": "growing older and aging"
+  },
+  {
+    "p": "advanced in age",
+    "m": "having lived to a very old age"
+  },
+  {
+    "p": "not as young as I used to be",
+    "m": "saying that one is getting older"
+  },
+  {
+    "p": "visually impaired",
+    "m": "having poor or no sight"
+  },
+  {
+    "p": "hearing impaired",
+    "m": "having partial or total hearing loss"
+  },
+  {
+    "p": "differently abled",
+    "m": "having a disability, described positively"
+  },
+  {
+    "p": "special needs",
+    "m": "extra support needed by a disabled person"
+  },
+  {
+    "p": "the big sleep",
+    "m": "death; the end of life"
+  },
+  {
+    "p": "pushing up daisies",
+    "m": "be dead and buried in a grave"
+  },
+  {
+    "p": "shuffle off this mortal coil",
+    "m": "to die, often in a humorous or literary way"
+  },
+  {
+    "p": "lose one's battle with illness",
+    "m": "die after a long illness"
+  },
+  {
+    "p": "go to one's reward",
+    "m": "die and go to heaven after a good life"
+  },
+  {
+    "p": "turn up one's toes",
+    "m": "die, especially suddenly or comically"
+  },
+  {
+    "p": "between engagements",
+    "m": "unemployed; without work at the moment"
+  },
+  {
+    "p": "in transition",
+    "m": "between jobs or changing careers"
+  },
+  {
+    "p": "seeking new opportunities",
+    "m": "unemployed and looking for a job"
+  },
+  {
+    "p": "at liberty",
+    "m": "unemployed; out of work, in an old-fashioned phrase"
+  },
+  {
+    "p": "released from one's position",
+    "m": "fired or let go from a job"
+  },
+  {
+    "p": "asked to resign",
+    "m": "fired but allowed to quit voluntarily"
+  },
+  {
+    "p": "shown the door",
+    "m": "fired or dismissed from a job"
+  },
+  {
+    "p": "given the boot",
+    "m": "fired or dismissed, especially from employment"
+  },
+  {
+    "p": "involuntary separation",
+    "m": "fired or laid off from employment"
+  },
+  {
+    "p": "headcount reduction",
+    "m": "layoffs; reducing the number of employees"
+  },
+  {
+    "p": "tired and emotional",
+    "m": "drunk, in a British humorous phrase"
+  },
+  {
+    "p": "feeling no pain",
+    "m": "drunk or heavily intoxicated"
+  },
+  {
+    "p": "under the influence",
+    "m": "drunk or affected by drugs"
+  },
+  {
+    "p": "worse for wear",
+    "m": "drunk or in poor condition after indulgences"
+  },
+  {
+    "p": "stretch the truth",
+    "m": "exaggerate or lie somewhat"
+  },
+  {
+    "p": "creative with the facts",
+    "m": "lie or distort the truth"
+  },
+  {
+    "p": "terminological inexactitude",
+    "m": "a lie, in a formal humorous phrase"
+  },
+  {
+    "p": "not entirely accurate",
+    "m": "false or mistaken, to avoid saying so directly"
+  },
+  {
+    "p": "half-truth",
+    "m": "a statement that is only partly true"
+  },
+  {
+    "p": "little boys' room",
+    "m": "men's restroom, used as a polite phrase"
+  },
+  {
+    "p": "little girls' room",
+    "m": "women's restroom, used as a polite phrase"
+  },
+  {
+    "p": "see a man about a horse",
+    "m": "go to the bathroom or leave secretly"
+  },
+  {
+    "p": "past one's prime",
+    "m": "no longer as good or young as before"
+  },
+  {
+    "p": "no spring chicken",
+    "m": "no longer young, used humorously"
+  },
+  {
+    "p": "long in the tooth",
+    "m": "old, originally said of horses"
+  },
+  {
+    "p": "well-preserved",
+    "m": "looking good for someone of that age"
+  },
+  {
+    "p": "in one's twilight years",
+    "m": "in the final period of old age"
+  },
+  {
+    "p": "senior moment",
+    "m": "a brief memory lapse, especially in an older person"
+  },
+  {
+    "p": "hard of hearing",
+    "m": "partially deaf or unable to hear well"
+  },
+  {
+    "p": "partially sighted",
+    "m": "having limited vision or partially blind"
+  },
+  {
+    "p": "intellectually disabled",
+    "m": "having a developmental or cognitive disability"
+  },
+  {
+    "p": "with child",
+    "m": "pregnant, an old-fashioned phrase"
+  },
+  {
+    "p": "eating for two",
+    "m": "pregnant, because one is eating enough for a baby"
+  },
+  {
+    "p": "in a delicate condition",
+    "m": "pregnant, especially in old-fashioned usage"
+  },
+  {
+    "p": "in trouble",
+    "m": "pregnant out of wedlock, an old-fashioned expression"
+  },
+  {
+    "p": "carnal knowledge",
+    "m": "sexual intercourse, in legal or formal use"
+  },
+  {
+    "p": "intimate relations",
+    "m": "sexual activity, described in a polite way"
+  },
+  {
+    "p": "do the deed",
+    "m": "have sex, as a vague or humorous phrase"
+  },
+  {
+    "p": "the facts of life",
+    "m": "sexual reproduction explained to children"
+  },
+  {
+    "p": "correctional facility",
+    "m": "prison, in official or polite language"
+  },
+  {
+    "p": "guest of the state",
+    "m": "prisoner, especially an inmate in a prison"
+  },
+  {
+    "p": "enhanced interrogation",
+    "m": "torture, as described by official language"
+  },
+  {
+    "p": "collateral damage",
+    "m": "unintended deaths or injuries, especially in war"
+  },
+  {
+    "p": "friendly fire",
+    "m": "accidental attack by one's own side"
+  },
+  {
+    "p": "negative growth",
+    "m": "economic contraction or decline in output"
+  },
+  {
+    "p": "revenue enhancement",
+    "m": "tax increase, in government euphemism"
+  },
+  {
+    "p": "let one's hair down",
+    "m": "relax and behave freely after restraint"
+  },
+  {
+    "p": "burn one's bridges",
+    "m": "act so that going back becomes impossible"
+  },
+  {
+    "p": "pull oneself together",
+    "m": "recover control of your emotions"
+  },
+  {
+    "p": "bite one's tongue",
+    "m": "refrain from saying what you think"
+  },
+  {
+    "p": "cross that bridge when one comes to it",
+    "m": "deal with a problem only when it arises"
+  },
+  {
+    "p": "of a certain age",
+    "m": "no longer young, somewhat old"
+  },
+  {
+    "p": "go all the way",
+    "m": "have sexual intercourse with someone"
+  },
+  {
+    "p": "know someone in the biblical sense",
+    "m": "have sex with someone"
+  },
+  {
+    "p": "friends with benefits",
+    "m": "friends who also have a sexual relationship"
+  },
+  {
+    "p": "hook up",
+    "m": "engage in casual sex with someone"
+  },
+  {
+    "p": "roll in the hay",
+    "m": "have sex with someone"
+  },
+  {
+    "p": "make a pit stop",
+    "m": "stop briefly to use the bathroom"
+  },
+  {
+    "p": "freshen up",
+    "m": "wash yourself or use the toilet"
+  },
+  {
+    "p": "wash one's hands",
+    "m": "use a bathroom to urinate"
+  },
+  {
+    "p": "the smallest room",
+    "m": "the toilet or bathroom"
+  },
+  {
+    "p": "portly",
+    "m": "rather fat or overweight"
+  },
+  {
+    "p": "heavyset",
+    "m": "large and heavy in body build"
+  },
+  {
+    "p": "full-figured",
+    "m": "plump, curvy, or overweight"
+  },
+  {
+    "p": "big-boned",
+    "m": "having a large or broad frame"
+  },
+  {
+    "p": "husky",
+    "m": "stocky and somewhat overweight"
+  },
+  {
+    "p": "buzzed",
+    "m": "slightly drunk from alcohol"
+  },
+  {
+    "p": "in one's cups",
+    "m": "drunk from too much alcohol"
+  },
+  {
+    "p": "three sheets to the wind",
+    "m": "very drunk and unsteady"
+  },
+  {
+    "p": "on the wagon",
+    "m": "choosing not to drink alcohol"
+  },
+  {
+    "p": "off the wagon",
+    "m": "drinking alcohol again after abstaining"
+  },
+  {
+    "p": "not all there",
+    "m": "lacking full mental awareness"
+  },
+  {
+    "p": "off one's rocker",
+    "m": "not thinking or behaving rationally"
+  },
+  {
+    "p": "nervous breakdown",
+    "m": "a period of extreme emotional stress"
+  },
+  {
+    "p": "under the knife",
+    "m": "going through a surgical operation"
+  },
+  {
+    "p": "on the mend",
+    "m": "recovering from an illness or injury"
+  },
+  {
+    "p": "gone to the other side",
+    "m": "died and crossed into the afterlife"
+  },
+  {
+    "p": "crossed over",
+    "m": "died and gone to the afterlife"
+  },
+  {
+    "p": "fell asleep",
+    "m": "died, as a gentle way of saying it"
+  },
+  {
+    "p": "departed",
+    "m": "died; left this life"
+  },
+  {
+    "p": "checked out",
+    "m": "died, usually suddenly or finally"
+  },
+  {
+    "p": "bought the farm",
+    "m": "died, especially suddenly or violently"
+  },
+  {
+    "p": "went to heaven",
+    "m": "died and entered the afterlife"
+  },
+  {
+    "p": "lost their life",
+    "m": "died as a result of violence"
+  },
+  {
+    "p": "joined the choir invisible",
+    "m": "died; left the living world"
+  },
+  {
+    "p": "went the way of all flesh",
+    "m": "died, as all living creatures do"
+  },
+  {
+    "p": "restructuring",
+    "m": "reorganizing a business, usually to cut jobs"
+  },
+  {
+    "p": "pass on",
+    "m": "to come to the end of one's life"
+  },
+  {
+    "p": "slip away",
+    "m": "to die peacefully, often while asleep"
+  },
+  {
+    "p": "breathe one's last",
+    "m": "to die; to take the final breath"
+  },
+  {
+    "p": "dearly departed",
+    "m": "a dead person, especially one just buried"
+  },
+  {
+    "p": "eternal rest",
+    "m": "death, especially as a state of peace"
+  },
+  {
+    "p": "gone to the great beyond",
+    "m": "has died and gone to the afterlife"
+  },
+  {
+    "p": "take out",
+    "m": "to kill or destroy someone or something"
+  },
+  {
+    "p": "neutralize",
+    "m": "to kill or remove someone as a threat"
+  },
+  {
+    "p": "extraordinary rendition",
+    "m": "the secret transfer of a suspect to another country for interrogation"
+  },
+  {
+    "p": "kinetic military action",
+    "m": "armed conflict, used to avoid the word 'war'"
+  },
+  {
+    "p": "police action",
+    "m": "a military engagement not officially declared a war"
+  },
+  {
+    "p": "regime change",
+    "m": "the overthrow of a government by force or pressure"
+  },
+  {
+    "p": "surgical strike",
+    "m": "a precisely targeted military attack"
+  },
+  {
+    "p": "cooking the books",
+    "m": "falsifying financial records to hide losses or theft"
+  },
+  {
+    "p": "massage the facts",
+    "m": "manipulate information to make it more favorable"
+  },
+  {
+    "p": "shade the truth",
+    "m": "tell a version of the truth that is incomplete or misleading"
+  },
+  {
+    "p": "paint a rosy picture",
+    "m": "describe a situation as better than it actually is"
+  },
+  {
+    "p": "rightsizing",
+    "m": "reducing the number of employees to an ideal level"
+  },
+  {
+    "p": "workforce reduction",
+    "m": "layoffs or cuts in the number of employees"
+  },
+  {
+    "p": "golden handshake",
+    "m": "a large payment given to an employee upon leaving"
+  },
+  {
+    "p": "take a package",
+    "m": "leave a job after accepting a severance offer"
+  },
+  {
+    "p": "part ways",
+    "m": "end a relationship or stop working together"
+  },
+  {
+    "p": "sanitation engineer",
+    "m": "a polite term for a garbage collector"
+  },
+  {
+    "p": "custodial engineer",
+    "m": "a polite term for a janitor or building cleaner"
+  },
+  {
+    "p": "domestic engineer",
+    "m": "a humorous euphemism for a homemaker"
+  },
+  {
+    "p": "correctional officer",
+    "m": "a polite term for a prison guard"
+  },
+  {
+    "p": "doing time",
+    "m": "serving a prison sentence"
+  },
+  {
+    "p": "behind bars",
+    "m": "imprisoned, literally located behind prison bars"
+  },
+  {
+    "p": "locked up",
+    "m": "imprisoned or confined in a jail"
+  },
+  {
+    "p": "underprivileged",
+    "m": "having less money and fewer opportunities than most people"
+  },
+  {
+    "p": "financially challenged",
+    "m": "poor; lacking sufficient money"
+  },
+  {
+    "p": "economically disadvantaged",
+    "m": "poor, with limited economic resources"
+  },
+  {
+    "p": "in reduced circumstances",
+    "m": "having less money than one used to have"
+  },
+  {
+    "p": "hard up",
+    "m": "short of money; in financial difficulty"
+  },
+  {
+    "p": "feeling the pinch",
+    "m": "experiencing money problems or shortages"
+  },
+  {
+    "p": "pre-owned",
+    "m": "used, especially with a warranty"
+  },
+  {
+    "p": "gently used",
+    "m": "used but in good condition"
+  },
+  {
+    "p": "pre-loved",
+    "m": "second-hand, usually in good condition"
+  },
+  {
+    "p": "vertically challenged",
+    "m": "short in height, as a humorous euphemism"
+  },
+  {
+    "p": "horizontally challenged",
+    "m": "overweight, in a joking euphemistic way"
+  },
+  {
+    "p": "plus-sized",
+    "m": "overweight, especially in clothing sizes"
+  },
+  {
+    "p": "mature",
+    "m": "middle-aged or older, often used politely"
+  },
+  {
+    "p": "up there in years",
+    "m": "old; of an advanced age"
+  },
+  {
+    "p": "autumn years",
+    "m": "the later stage of a person's life"
+  },
+  {
+    "p": "seasoned citizen",
+    "m": "a polite or humorous term for an older person"
+  },
+  {
+    "p": "adult beverages",
+    "m": "alcoholic drinks such as beer, wine, or liquor"
+  },
+  {
+    "p": "a bit tipsy",
+    "m": "slightly drunk, not fully intoxicated"
+  },
+  {
+    "p": "over-served",
+    "m": "served too much alcohol, appearing drunk"
+  },
+  {
+    "p": "had a few too many",
+    "m": "drunk; consumed excessive alcohol"
+  },
+  {
+    "p": "nightcap",
+    "m": "an alcoholic drink taken before going to bed"
+  },
+  {
+    "p": "learning difference",
+    "m": "a learning disability or difficulty"
+  },
+  {
+    "p": "a little touched",
+    "m": "slightly mentally ill or strange"
+  },
+  {
+    "p": "break wind",
+    "m": "pass gas from the intestines"
+  },
+  {
+    "p": "the oldest profession",
+    "m": "work as a prostitute"
+  },
+  {
+    "p": "a little thin on top",
+    "m": "losing one's hair or starting to go bald"
+  },
+  {
+    "p": "the change of life",
+    "m": "the period when a woman goes through menopause"
+  },
+  {
+    "p": "wardrobe malfunction",
+    "m": "clothing slips and exposes private body parts"
+  },
+  {
+    "p": "make whoopee",
+    "m": "have sexual intercourse together"
+  },
+  {
+    "p": "laid off",
+    "m": "dismissed from a job, usually for economic reasons"
+  },
+  {
+    "p": "unmentionables",
+    "m": "underwear or undergarments, not named directly"
+  },
+  {
+    "p": "time of the month",
+    "m": "the time when a woman menstruates"
+  },
+  {
+    "p": "love handles",
+    "m": "excess fat on the sides of the waist"
+  },
+  {
+    "p": "tinkle",
+    "m": "urinate; used especially when speaking to children"
+  },
+  {
+    "p": "embellish the truth",
+    "m": "add exaggerated or invented details to a story"
+  },
+  {
+    "p": "what the heck",
+    "m": "a mild expression of annoyance or surprise"
+  },
+  {
+    "p": "five-finger discount",
+    "m": "steal goods from a store"
+  },
+  {
+    "p": "water closet",
+    "m": "a small room containing a toilet"
+  },
+  {
+    "p": "strapped for cash",
+    "m": "having little money available"
+  },
+  {
+    "p": "person of interest",
+    "m": "a possible suspect in a criminal investigation"
+  },
+  {
+    "p": "unhoused",
+    "m": "living without a permanent home"
+  },
+  {
+    "p": "recreational drugs",
+    "m": "drugs used for pleasure rather than medical reasons"
+  }
+]

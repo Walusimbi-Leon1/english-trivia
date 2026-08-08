@@ -1,0 +1,394 @@
+[
+  {
+    "p": "All's fair in love and war",
+    "m": "in some situations, any behavior is acceptable"
+  },
+  {
+    "p": "As you sow, so shall you reap",
+    "m": "your actions will bring their own consequences"
+  },
+  {
+    "p": "Beggars can't be choosers",
+    "m": "people with no options must accept what they get"
+  },
+  {
+    "p": "Don't bite the hand that feeds you",
+    "m": "don't hurt someone who helps you"
+  },
+  {
+    "p": "Don't count your chickens before they're hatched",
+    "m": "don't assume success before it happens"
+  },
+  {
+    "p": "Don't judge a book by its cover",
+    "m": "don't judge someone or something by appearance alone"
+  },
+  {
+    "p": "Don't put all your eggs in one basket",
+    "m": "don't risk everything on one plan"
+  },
+  {
+    "p": "First come, first served",
+    "m": "those who arrive earliest get the best choice"
+  },
+  {
+    "p": "Fortune favors the brave",
+    "m": "bold people are more likely to succeed"
+  },
+  {
+    "p": "Half a loaf is better than no bread",
+    "m": "having less than wanted is better than nothing"
+  },
+  {
+    "p": "He who hesitates is lost",
+    "m": "delaying action can make you miss an opportunity"
+  },
+  {
+    "p": "His bark is worse than his bite",
+    "m": "someone seems threatening but is not actually dangerous"
+  },
+  {
+    "p": "Measure twice, cut once",
+    "m": "check carefully before acting to avoid mistakes"
+  },
+  {
+    "p": "No pain, no gain",
+    "m": "you must suffer or work hard to achieve something"
+  },
+  {
+    "p": "One man's trash is another man's treasure",
+    "m": "what one person rejects can be valued by another"
+  },
+  {
+    "p": "Don't cry over spilled milk",
+    "m": "Don't waste time regretting what has already happened"
+  },
+  {
+    "p": "Give him an inch and he'll take a mile",
+    "m": "A small concession encourages greedy demands"
+  },
+  {
+    "p": "If the shoe fits, wear it",
+    "m": "Accept criticism if it applies to you"
+  },
+  {
+    "p": "There's no place like home",
+    "m": "Home is the most comfortable place"
+  },
+  {
+    "p": "Where there's a will, there's a way",
+    "m": "Strong determination overcomes obstacles"
+  },
+  {
+    "p": "You can lead a horse to water but you can't make it drink",
+    "m": "You cannot force someone to take an opportunity"
+  },
+  {
+    "p": "You can't teach an old dog new tricks",
+    "m": "Old habits are extremely hard to change"
+  },
+  {
+    "p": "Don't look a gift horse in the mouth",
+    "m": "Don't examine a gift too critically"
+  },
+  {
+    "p": "Opposites attract",
+    "m": "Different personalities often form strong relationships"
+  },
+  {
+    "p": "Don't make a mountain out of a molehill",
+    "m": "Don't make a small issue seem huge"
+  },
+  {
+    "p": "Faint heart never won fair lady",
+    "m": "Timidity prevents you from winning goals"
+  },
+  {
+    "p": "If you want something done right, do it yourself",
+    "m": "To ensure quality, do the task yourself"
+  },
+  {
+    "p": "Lightning never strikes the same place twice",
+    "m": "The same bad thing won't usually happen twice"
+  },
+  {
+    "p": "Once bitten, twice shy",
+    "m": "A bad experience makes you more cautious"
+  },
+  {
+    "p": "Out of sight, out of mind",
+    "m": "You forget what you cannot see"
+  },
+  {
+    "p": "The end justifies the means",
+    "m": "A good outcome excuses questionable methods"
+  },
+  {
+    "p": "United we stand, divided we fall",
+    "m": "Unity brings strength; division brings failure"
+  },
+  {
+    "p": "Business before pleasure",
+    "m": "work should come before leisure"
+  },
+  {
+    "p": "Easy come, easy go",
+    "m": "things gained easily are often lost easily"
+  },
+  {
+    "p": "If it ain't broke, don't fix it",
+    "m": "don't change something that works well"
+  },
+  {
+    "p": "If you can't beat them, join them",
+    "m": "if you cannot win, it may be better to cooperate"
+  },
+  {
+    "p": "If you play with fire, you'll get burned",
+    "m": "taking dangerous risks brings harm"
+  },
+  {
+    "p": "Money doesn't grow on trees",
+    "m": "money is scarce; do not waste it"
+  },
+  {
+    "p": "Pride goes before a fall",
+    "m": "arrogance often leads to failure"
+  },
+  {
+    "p": "Rome wasn't built in a day",
+    "m": "great achievements take time"
+  },
+  {
+    "p": "There's more than one way to skin a cat",
+    "m": "many methods can reach the same goal"
+  },
+  {
+    "p": "There's no such thing as a free lunch",
+    "m": "nothing is truly free; there is always a cost"
+  },
+  {
+    "p": "When in Rome, do as the Romans do",
+    "m": "follow the customs of the place you are visiting"
+  },
+  {
+    "p": "You can't have your cake and eat it too",
+    "m": "you cannot keep something and also use it up"
+  },
+  {
+    "p": "Don't bite off more than you can chew",
+    "m": "don't take on more responsibility than you can handle"
+  },
+  {
+    "p": "Don't burn your bridges",
+    "m": "don't ruin relationships or opportunities that you might need later"
+  },
+  {
+    "p": "Don't cross that bridge until you come to it",
+    "m": "don't worry about a problem until it actually happens"
+  },
+  {
+    "p": "Don't rock the boat",
+    "m": "don't disturb an existing situation or cause trouble"
+  },
+  {
+    "p": "If you snooze, you lose",
+    "m": "if you delay or are inattentive, you miss your opportunity"
+  },
+  {
+    "p": "Nothing ventured, nothing gained",
+    "m": "you cannot achieve success without taking risks"
+  },
+  {
+    "p": "When the cat's away, the mice will play",
+    "m": "people misbehave when the person in authority is absent"
+  },
+  {
+    "p": "All work and no play makes Jack a dull boy",
+    "m": "working all the time without relaxation makes someone boring and unhappy"
+  },
+  {
+    "p": "If at first you don't succeed, try, try again",
+    "m": "keep trying after failure; persistence leads to success"
+  },
+  {
+    "p": "Like father, like son",
+    "m": "a child often resembles or behaves like his parent"
+  },
+  {
+    "p": "You can't make bricks without straw",
+    "m": "it is impossible to do a job without proper materials"
+  },
+  {
+    "p": "A word to the wise is enough",
+    "m": "a clever person understands a warning or hint without needing a long explanation"
+  },
+  {
+    "p": "All's well that ends well",
+    "m": "a good ending makes earlier problems seem unimportant"
+  },
+  {
+    "p": "A little knowledge is a dangerous thing",
+    "m": "knowing a little can cause overconfidence and mistakes"
+  },
+  {
+    "p": "A rising tide lifts all boats",
+    "m": "a general improvement benefits everyone involved"
+  },
+  {
+    "p": "Experience is the best teacher",
+    "m": "you learn most by doing things yourself"
+  },
+  {
+    "p": "If life gives you lemons, make lemonade",
+    "m": "turn a bad situation into something good"
+  },
+  {
+    "p": "The apple doesn't fall far from the tree",
+    "m": "children usually resemble their parents in character"
+  },
+  {
+    "p": "There are plenty more fish in the sea",
+    "m": "after losing a partner, there are other possible partners"
+  },
+  {
+    "p": "There are two sides to every story",
+    "m": "different people can see the same event differently"
+  },
+  {
+    "p": "Two wrongs don't make a right",
+    "m": "harming someone in return is still wrong"
+  },
+  {
+    "p": "Waste not, want not",
+    "m": "using things carefully prevents future scarcity"
+  },
+  {
+    "p": "What's done is done",
+    "m": "you cannot change the past, so let it go"
+  },
+  {
+    "p": "You are what you eat",
+    "m": "your health and character are affected by your diet"
+  },
+  {
+    "p": "You can't take it with you",
+    "m": "wealth cannot be used after death, so enjoy it now"
+  },
+  {
+    "p": "You live and learn",
+    "m": "experience is how people gain wisdom"
+  },
+  {
+    "p": "All roads lead to Rome",
+    "m": "many different methods can lead to the same result"
+  },
+  {
+    "p": "An ounce of prevention is worth a pound of cure",
+    "m": "stopping a problem before it starts is better than fixing it after"
+  },
+  {
+    "p": "Better the devil you know than the devil you don't",
+    "m": "a familiar problem is less scary than an unknown one"
+  },
+  {
+    "p": "Brevity is the soul of wit",
+    "m": "being concise is the essence of cleverness"
+  },
+  {
+    "p": "Good things come in small packages",
+    "m": "something small can be excellent"
+  },
+  {
+    "p": "Grass is always greener on the other side",
+    "m": "people think others' situations are better than their own"
+  },
+  {
+    "p": "To err is human, to forgive divine",
+    "m": "everyone makes mistakes, but forgiveness is noble"
+  },
+  {
+    "p": "When it rains, it pours",
+    "m": "bad things often happen all at once"
+  },
+  {
+    "p": "When the going gets tough, the tough get going",
+    "m": "strong people become more active when facing difficulties"
+  },
+  {
+    "p": "Where there's life, there's hope",
+    "m": "as long as someone is alive, there is a chance of improvement"
+  },
+  {
+    "p": "You can't make a silk purse out of a sow's ear",
+    "m": "you cannot turn something inferior into something fine"
+  },
+  {
+    "p": "You can't win them all",
+    "m": "it is impossible to succeed every time"
+  },
+  {
+    "p": "A bad workman blames his tools",
+    "m": "someone who does a poor job blames their equipment instead of themselves"
+  },
+  {
+    "p": "A new broom sweeps clean",
+    "m": "a newly appointed person often makes sweeping changes"
+  },
+  {
+    "p": "All good things come to those who wait",
+    "m": "patience is eventually rewarded"
+  },
+  {
+    "p": "Appearances can be deceptive",
+    "m": "things are not always what they seem"
+  },
+  {
+    "p": "Attack is the best form of defense",
+    "m": "going on the offensive can protect you better than retreating"
+  },
+  {
+    "p": "Beauty is only skin deep",
+    "m": "physical beauty does not reflect a person's true character"
+  },
+  {
+    "p": "Do as I say, not as I do",
+    "m": "follow my advice rather than imitate my behavior"
+  },
+  {
+    "p": "Good fences make good neighbors",
+    "m": "clear boundaries help maintain good relationships"
+  },
+  {
+    "p": "In for a penny, in for a pound",
+    "m": "once you start something, you should commit to it fully"
+  },
+  {
+    "p": "Time is money",
+    "m": "time is valuable and should not be wasted"
+  },
+  {
+    "p": "a fool and his money are soon parted",
+    "m": "foolish people quickly lose their money."
+  },
+  {
+    "p": "fight fire with fire",
+    "m": "respond to hostility with the same methods."
+  },
+  {
+    "p": "if the mountain won't come to Muhammad, Muhammad must go to the mountain",
+    "m": "if something will not come to you, you must go to it."
+  },
+  {
+    "p": "there is no accounting for taste",
+    "m": "people have very different likes and dislikes."
+  },
+  {
+    "p": "what's sauce for the goose is sauce for the gander",
+    "m": "the same rules should apply to everyone."
+  },
+  {
+    "p": "a man is known by the company he keeps",
+    "m": "people judge you by the friends you choose."
+  }
+]
