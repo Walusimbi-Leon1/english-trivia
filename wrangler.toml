@@ -1,0 +1,22 @@
+name = "english-trivia"
+main = "dist/worker.js"
+compatibility_date = "2026-08-08"
+
+# ⚠️ SECRETS POLICY — READ THIS
+# OPENCODE_API_KEY and DISCORD_CLIENT_SECRET are NOT stored in this repo.
+# They live as encrypted Cloudflare Worker secrets (set by deploy.sh from
+# environment variables) and, for the question pipeline, as the GitHub
+# Actions secret `OPENCODE_API_KEY`. Never commit real secret values here.
+
+[vars]
+# Discord OAuth (confidential client) — client ID is public.
+DISCORD_CLIENT_ID = "REPLACE_WITH_ENGLISH_TRIVIA_CLIENT_ID"
+# IMPORTANT: must match the redirect URI registered in the Discord
+# Developer Portal EXACTLY (no trailing slash — matches Leon's authorize link).
+REDIRECT_URI = "https://english-trivia.walusimbileon1.workers.dev"
+
+# Question generation — opencode.ai (big-pickle)
+MODEL = "big-pickle"
+
+# Firebase Realtime Database (shared, public-writable)
+FB_HOST = "pop-party-1-default-rtdb.firebaseio.com"

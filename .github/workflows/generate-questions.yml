@@ -1,0 +1,39 @@
+name: Generate English Trivia Questions
+
+# Keep the game's question bank topped up. The game drains ~180 questions/hour
+# (20s per question, clock runs 24/7), so this runs every 30 minutes to keep
+# ~2 hours of runway. Public repo → free unlimited Actions minutes.
+# Every batch sources fresh phrases from the repo's data/*.json corpus and
+# generates questions with opencode.ai (big-pickle).
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: generate-questions
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate & refill question bank
+        run: node scripts/generate-questions.js
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          MODEL: big-pickle
+          FB_HOST: pop-party-1-default-rtdb.firebaseio.com

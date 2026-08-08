@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>📚 English Trivia</title>
+<meta name="description" content="English Trivia — fast-paced multiplayer trivia about English idioms, proverbs, colloquialisms, jargon, euphemisms, maxims &amp; clichés, for Discord Activities">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1 class="logo">📚 English <span class="logo-elite">Trivia</span></h1>
+      <div id="header-me" class="me-chip"></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Loading -->
+    <section id="screen-loading" class="screen">
+      <div class="center-box">
+        <div class="spinner big"></div>
+        <p class="muted" id="loading-msg">Connecting to the arena…</p>
+      </div>
+    </section>
+
+    <!-- Error -->
+    <section id="screen-error" class="screen hidden">
+      <div class="center-box card">
+        <h2>⚠️ Something went wrong</h2>
+        <p class="muted" id="error-msg"></p>
+        <button id="btn-retry" class="btn btn-primary">Retry</button>
+      </div>
+    </section>
+
+    <!-- Game -->
+    <section id="screen-game" class="screen hidden">
+      <div class="game-grid">
+
+        <div class="column main-col">
+          <div class="q-meta">
+            <span id="q-number" class="q-number">Question 1</span>
+            <span id="q-answered" class="q-answered">⚡ 0/1 answered</span>
+          </div>
+
+          <div class="timer-wrap">
+            <div class="timer-track"><div id="q-progress" class="timer-fill"></div></div>
+            <div class="timer-label"><span id="q-time" class="q-time">20s</span></div>
+          </div>
+
+          <div class="card q-card">
+            <h2 id="q-text" class="q-text">Loading question…</h2>
+            <p id="q-ref" class="q-ref"></p>
+          </div>
+
+          <div id="q-options" class="opt-grid"></div>
+
+          <div id="q-result" class="result-box hidden"></div>
+        </div>
+
+        <aside class="column side-col">
+          <div class="card lb-card">
+            <h3 class="card-title" id="lb-title">Leaderboard</h3>
+            <div id="lb-list"></div>
+            <p id="my-rank" class="muted small my-rank-line"></p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Questions from the <a href="https://github.com/Walusimbi-Leon1/english-trivia" target="_blank" rel="noopener">English Phrase Corpus</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a class="support-link" href="https://walusimbi-leon1.github.io/voice-support/" target="_blank" rel="noopener">💛 Support Developer</a>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
