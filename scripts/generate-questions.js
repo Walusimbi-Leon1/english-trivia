@@ -340,9 +340,6 @@ async function main() {
 
   await fbPatch(`${P}/game`, {
     bankLen: bankData.length,
-    questionStart: Date.now(),
-    slotDuration: SLOT_DURATION,
-    startedAt: game.startedAt || Date.now(),
   });
   const newUsed = fresh.map((q) => q.question).concat(used).slice(0, USED_MAX);
   await fbPatch(`${P}/meta`, { generating: 0, used: newUsed });

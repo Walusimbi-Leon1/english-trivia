@@ -384,20 +384,11 @@ async function handleTrivia(request, env, ctx) {
     await markUsed(env, allAccepted);
     const bankLen = len + allAccepted.length;
 
-    if (bankLen > BANK_MAX) {
-      const patch = {};
-      allAccepted.forEach((q, i) => (patch[i] = q));
-      await fbPut(env, `${P}/bank`, patch);
-      await fbDelete(env, `${P}/answers`).catch(() => {});
-      await fbPut(env, `${P}/game`, {
-        questionStart: Date.now(),
-        slotDuration: SLOT_DURATION,
-        bankLen: allAccepted.length,
-        startedAt: Date.now(),
-      });
-      await fbPut(env, `${P}/meta`, { generating: 0, used: (await readUsed(env)) });
-      return json({ bankLen: allAccepted.length, reset: true, source: fromStatic ? "seed" : "ai" });
-    }
+    // NOTE: no BANK_MAX reset here on purpose — resetting the bank would
+    // require resetting questionStart, which resets the question counter
+    // (bible-trivia keeps its counter climbing with a bank far above 1000;
+    // Firebase handles it fine). The GitHub Actions pipeline appends and
+    // prunes instead.
 
     const game = await fbGet(env, `${P}/game`).catch(() => null);
     if (game) {
