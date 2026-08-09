@@ -299,7 +299,7 @@ async function main() {
   }
 
   const existing = bankArr;
-  bankData = existing.concat(fresh);
+  bankData = normalizeBank(existing.concat(fresh));
 
   // Write bank as a JSON object with numeric keys (avoids Firebase array
   // coercion quirks at large sizes; the worker handles both shapes).
@@ -321,6 +321,47 @@ async function main() {
   const newUsed = fresh.map((q) => q.question).concat(used).slice(0, USED_MAX);
   await fbPatch(`${P}/meta`, { generating: 0, used: newUsed });
   console.log(`APPEND done: ${fresh.length} added (bank ${bankLen} → ${bankData.length}).`);
+}
+
+
+// ── Answer-letter randomization (matches worker) ────────────────────────────
+function reshuffle(q, forbidden) {
+  if (!q || !Array.isArray(q.options) || q.options.length < 2) return q;
+  const options = q.options.slice();
+  const n = options.length;
+  const ci = Number.isInteger(q.correctAnswer) && q.correctAnswer >= 0 && q.correctAnswer < n ? q.correctAnswer : 0;
+  const correct = options[ci];
+  let candidates = [];
+  for (let i = 0; i < n; i++) if (!forbidden.has(i)) candidates.push(i);
+  if (!candidates.length) candidates = Array.from({ length: n }, (_, i) => i);
+  const target = candidates[Math.floor(Math.random() * candidates.length)];
+  const others = options.filter((_, i) => i !== ci);
+  for (let i = others.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [others[i], others[j]] = [others[j], others[i]];
+  }
+  const out = new Array(n);
+  out[target] = correct;
+  let k = 0;
+  for (let i = 0; i < n; i++) {
+    if (i === target) continue;
+    out[i] = others[k++];
+  }
+  return { question: q.question, options: out, correctAnswer: target };
+}
+
+function normalizeBank(arr) {
+  if (!Array.isArray(arr) || !arr.length) return arr;
+  const out = arr.map((q) => ({ ...q, options: Array.isArray(q.options) ? q.options.slice() : q.options }));
+  out[0] = reshuffle(out[0], new Set());
+  for (let i = 1; i < out.length; i++) {
+    out[i] = reshuffle(out[i], new Set([out[i - 1].correctAnswer]));
+  }
+  const n = out.length;
+  if (n > 1 && out[n - 1].correctAnswer === out[0].correctAnswer) {
+    out[n - 1] = reshuffle(out[n - 1], new Set([out[n - 2].correctAnswer, out[0].correctAnswer]));
+  }
+  return out;
 }
 
 main().catch((err) => {

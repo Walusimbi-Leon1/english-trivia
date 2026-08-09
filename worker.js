@@ -274,6 +274,57 @@ Return ONLY a JSON array (no markdown) with exactly this structure:
 // build.js fills __FALLBACK_BANK__.
 const QUESTION_BANK = __FALLBACK_BANK__;
 
+// ── Answer-letter randomization ─────────────────────────────────────────────
+// The AI generator and the static bank both bias heavily toward one
+// correctAnswer index, so players could win by always tapping the same
+// letter. Fix: whenever questions enter the bank, shuffle their options so the
+// correct answer lands on a random letter — and never the same letter as the
+// previous question in slot order (wrap-around at the bank seam included).
+// Shuffling happens SERVER-side at write time so every client computes the
+// same letters for the same slot (a client-side shuffle would break scoring).
+function reshuffle(q, forbidden) {
+  if (!q || !Array.isArray(q.options) || q.options.length < 2) return q;
+  const options = q.options.slice();
+  const n = options.length;
+  const ci = Number.isInteger(q.correctAnswer) && q.correctAnswer >= 0 && q.correctAnswer < n ? q.correctAnswer : 0;
+  const correct = options[ci];
+  let candidates = [];
+  for (let i = 0; i < n; i++) if (!forbidden.has(i)) candidates.push(i);
+  if (!candidates.length) candidates = Array.from({ length: n }, (_, i) => i);
+  const target = candidates[Math.floor(Math.random() * candidates.length)];
+  const others = options.filter((_, i) => i !== ci);
+  for (let i = others.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [others[i], others[j]] = [others[j], others[i]];
+  }
+  const out = new Array(n);
+  out[target] = correct;
+  let k = 0;
+  for (let i = 0; i < n; i++) {
+    if (i === target) continue;
+    out[i] = others[k++];
+  }
+  return { question: q.question, options: out, correctAnswer: target };
+}
+
+// Normalize a full ordered bank: random letter for every question, no two
+// consecutive entries share a correct letter, and the last entry differs from
+// the first (bank seam / wrap-around). Always satisfiable (4 options, at most
+// 2 forbidden letters for any single question).
+function normalizeBank(arr) {
+  if (!Array.isArray(arr) || !arr.length) return arr;
+  const out = arr.map((q) => ({ ...q, options: Array.isArray(q.options) ? q.options.slice() : q.options }));
+  out[0] = reshuffle(out[0], new Set());
+  for (let i = 1; i < out.length; i++) {
+    out[i] = reshuffle(out[i], new Set([out[i - 1].correctAnswer]));
+  }
+  const n = out.length;
+  if (n > 1 && out[n - 1].correctAnswer === out[0].correctAnswer) {
+    out[n - 1] = reshuffle(out[n - 1], new Set([out[n - 2].correctAnswer, out[0].correctAnswer]));
+  }
+  return out;
+}
+
 function builtinSeed(excludeSet) {
   const all = [];
   for (const item of QUESTION_BANK) {
@@ -311,6 +362,40 @@ async function handleTrivia(request, env, ctx) {
       return json({ bankLen: len, generating: true });
     }
 
+    // One-time migration (lettersV2): reshuffle the EXISTING bank so the
+    // correct answer lands on a random letter per question and never repeats
+    // the previous question's letter. Restart the clock so the live slot
+    // re-syncs cleanly (player scores persist; only the current question
+    // restarts). Self-heals on the first client request after deploy.
+    // NOTE: the flag lives at ${P}/lettersV2 (its own path) — meta is
+    // full-replaced by the top-up paths, so a flag there would be clobbered
+    // and the migration would re-run (and restart the clock) every top-up.
+    const lettersV2 = await fbGet(env, `${P}/lettersV2`).catch(() => null);
+    if (!lettersV2 && len > 0) {
+      if (meta.lastReset && Date.now() - meta.lastReset < 15000) {
+        return json({ bankLen: len, reset: false, recently: true });
+      }
+      const arr = normalizeBank(
+        Object.keys(bank)
+          .map(Number)
+          .sort((a, b) => a - b)
+          .map((k) => bank[k])
+      );
+      const patch = {};
+      arr.forEach((q, i) => (patch[i] = q));
+      await fbPut(env, `${P}/bank`, patch);
+      await fbDelete(env, `${P}/answers`).catch(() => {});
+      await fbPut(env, `${P}/game`, {
+        questionStart: Date.now(),
+        slotDuration: SLOT_DURATION,
+        bankLen: arr.length,
+        startedAt: Date.now(),
+      });
+      await fbPut(env, `${P}/lettersV2`, { v: 1, at: Date.now() });
+      await fbPut(env, `${P}/meta`, { ...meta, generating: 0, lettersV2: 1, lastReset: Date.now(), used: usedRaw });
+      return json({ bankLen: arr.length, reset: true, lettersV2: true });
+    }
+
     // Empty bank → generate a fresh AI batch immediately (fallback: built-ins),
     // then start the question clock.
     if (len === 0) {
@@ -326,6 +411,7 @@ async function handleTrivia(request, env, ctx) {
       let fresh = filterFresh(questions, usedSet, bankSet);
       if (!fresh.length) fresh = questions;
       if (!fresh.length) fresh = builtinSeed();   // absolute last resort — never stall
+      fresh = normalizeBank(fresh);
       const patch = {};
       fresh.forEach((q, i) => (patch[i] = q));
       await fbPut(env, `${P}/bank`, patch);
@@ -371,6 +457,19 @@ async function handleTrivia(request, env, ctx) {
       let fresh = filterFresh(batch, usedSet, bankSet);
       if (!fresh.length) fresh = batch;
       if (!fresh.length) break;
+      // Chain correct-letter positions against the previous bank entry so no
+      // two consecutive questions share a correct letter.
+      let prevCorrect = null;
+      {
+        const keys = Object.keys(bank).map(Number).sort((a, b) => a - b);
+        const last = bank[keys[keys.length - 1]];
+        if (last && last.correctAnswer != null) prevCorrect = last.correctAnswer;
+      }
+      fresh = fresh.map((q) => {
+        const r = reshuffle(q, prevCorrect == null ? new Set() : new Set([prevCorrect]));
+        prevCorrect = r.correctAnswer;
+        return r;
+      });
       const patch = {};
       fresh.forEach((q, i) => (patch[len + allAccepted.length + i] = q));
       await fbPatch(env, `${P}/bank`, patch);
@@ -432,11 +531,23 @@ function ctxWait(ctx, env, count, usedRaw) {
           await fbPut(env, `${P}/meta`, { generating: 0 }).catch(() => {});
           return;
         }
+        // Re-read the bank tail right before appending: another request may
+        // have reshuffled/reset the bank while we were generating, so the
+        // stale `len` offset could overwrite live questions.
+        const tailBank = (await fbGet(env, `${P}/bank`).catch(() => null)) || {};
+        const tailKeys = Object.keys(tailBank).map(Number).sort((a, b) => a - b);
+        const startKey = tailKeys.length ? tailKeys[tailKeys.length - 1] + 1 : 0;
+        const lastQ = tailBank[tailKeys[tailKeys.length - 1]];
+        let prevCorrect = lastQ && lastQ.correctAnswer != null ? lastQ.correctAnswer : null;
         const patch = {};
-        fresh.forEach((q, i) => (patch[len + i] = q));
+        fresh.forEach((q, i) => {
+          const r = reshuffle(q, prevCorrect == null ? new Set() : new Set([prevCorrect]));
+          prevCorrect = r.correctAnswer;
+          patch[startKey + i] = r;
+        });
         await fbPatch(env, `${P}/bank`, patch);
         const game = await fbGet(env, `${P}/game`).catch(() => null);
-        if (game) await fbPatch(env, `${P}/game`, { bankLen: len + fresh.length });
+        if (game) await fbPatch(env, `${P}/game`, { bankLen: startKey + fresh.length });
         await markUsed(env, fresh);
         await fbPut(env, `${P}/meta`, { generating: 0, used: (await readUsed(env)) }).catch(() => {});
         console.log("[Trivia] bg top-up appended", fresh.length);
