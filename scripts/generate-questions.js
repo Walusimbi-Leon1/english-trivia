@@ -25,13 +25,9 @@
  * questions/hour. This script keeps bankLen − currentSlot ≈ RUNWAY (350),
  * i.e. ~2 hours of runway. Scheduled every 30 min that's plenty of margin.
  *
- * Modes:
- *   - APPEND: bank is healthy-ish → generate `want` fresh questions, append
- *     at the end of the bank, bump game.bankLen.
- *   - RESET : game is badly behind (slot − bankLen > RESET_BEHIND) or has no
- *     clock → fresh bank + new questionStart (instant recovery from the
- *     "Preparing new questions…" stuck state). Player scores persist; only
- *     per-question answers are cleared.
+ * The bank NEVER resets or shrinks (Leon's rule): every question ever
+ * generated stays stored forever. Even if the game is badly behind, we just
+ * append a big batch — nothing is ever deleted or rebuilt from scratch.
  *
  * Exit codes: 0 = ok (may be "nothing to do"), 1 = failure (workflow alert).
  */
@@ -42,7 +38,6 @@ const path = require("path");
 const SLOT_DURATION = 20000; // 20s per question (matches worker)
 const RUNWAY = 350; // target: bankLen − slot after a run
 const MIN_ADD = 60; // skip unless we'd add at least this many
-const RESET_BEHIND = 150; // slot − bankLen above this → reset the clock
 const CHUNK = 40; // questions per API call (reliable JSON output)
 const MAX_TOKENS = 24000; // big budget: reasoning + passage + 40 questions fits
 const USED_MAX = 600; // keep this many past questions (matches worker)
@@ -288,32 +283,6 @@ async function main() {
   let bankData;
   const want = Math.max(0, Math.min(RUNWAY - margin, 350));
 
-  if (!game.questionStart || slot - bankLen > RESET_BEHIND) {
-    // ── RESET ────────────────────────────────────────────────────────────
-    console.log("Mode: RESET — rebuilding bank from scratch...");
-    const persisted = [];
-    const onChunk = async (chunk) => {
-      persisted.push(...chunk);
-      const obj = {};
-      for (let i = 0; i < persisted.length; i++) obj[i] = persisted[i];
-      await fbPut(`${P}/bank`, obj); // idempotent full write of what we have
-      console.log(`  persisted ${persisted.length} questions so far...`);
-    };
-    const fresh = await generateFresh(320, [], onChunk);
-    if (fresh.length < 40) throw new Error(`RESET produced only ${fresh.length} questions`);
-    bankData = fresh;
-    await fbPut(`${P}/bank`, bankData);
-    await fbPatch(`${P}/game`, {
-      bankLen: fresh.length,
-      questionStart: Date.now(),
-      slotDuration: SLOT_DURATION,
-      startedAt: game.startedAt || Date.now(),
-    });
-    await fbPatch(`${P}/meta`, { generating: 0, used: fresh.map((q) => q.question) });
-    console.log(`RESET done: bank rebuilt with ${fresh.length} questions.`);
-    return;
-  }
-
   if (want < MIN_ADD) {
     console.log(`Bank healthy (margin ${margin}); nothing to add.`);
     await fbPatch(`${P}/meta`, { generating: 0 });
@@ -338,9 +307,17 @@ async function main() {
   for (let i = 0; i < bankData.length; i++) obj[i] = bankData[i];
   await fbPut(`${P}/bank`, obj);
 
-  await fbPatch(`${P}/game`, {
-    bankLen: bankData.length,
-  });
+  if (game && game.questionStart) {
+    await fbPatch(`${P}/game`, { bankLen: bankData.length });
+  } else {
+    // First-ever seed: start the question clock too.
+    await fbPut(`${P}/game`, {
+      bankLen: bankData.length,
+      questionStart: now,
+      slotDuration: SLOT_DURATION,
+      startedAt: now,
+    });
+  }
   const newUsed = fresh.map((q) => q.question).concat(used).slice(0, USED_MAX);
   await fbPatch(`${P}/meta`, { generating: 0, used: newUsed });
   console.log(`APPEND done: ${fresh.length} added (bank ${bankLen} → ${bankData.length}).`);
